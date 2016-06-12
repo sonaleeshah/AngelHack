@@ -7,8 +7,6 @@
 //
 
 import UIKit
-//import RPFloatingPlaceholderTextField
-//import RPFloatingPlaceholderTextView
 
 class ViewController: UIViewController {
     
