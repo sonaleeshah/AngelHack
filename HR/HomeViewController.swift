@@ -9,8 +9,16 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet var menuButton: UIBarButtonItem!
+    
+    var homePageViewController: HomePageViewController? {
+        didSet {
+            homePageViewController?.homeDelegate = self
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +30,18 @@ class HomeViewController: UIViewController {
             
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        pageControl.addTarget(self, action: "didChangePageControlValue", forControlEvents: .ValueChanged)
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let homePageViewController = segue.destinationViewController as? HomePageViewController {
+            self.homePageViewController = homePageViewController
+        }
+    }
+    
+    func didChangePageControlValue() {
+        homePageViewController?.scrollToViewController(index: pageControl.currentPage)
     }
 
 
@@ -29,16 +49,19 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+}
+
+extension HomeViewController: HomePageViewControllerDelegate {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func homePageViewController(homePageViewController: HomePageViewController,
+                                    didUpdatePageCount count: Int) {
+        pageControl.numberOfPages = count
     }
-    */
-
+    
+    func homePageViewController(homePageViewController: HomePageViewController,
+                                    didUpdatePageIndex index: Int) {
+        pageControl.currentPage = index
+    }
+    
 }
