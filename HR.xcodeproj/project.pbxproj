@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D5D206CD1D0CB4C8009C2E86 /* CandidateQAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D206CC1D0CB4C8009C2E86 /* CandidateQAViewController.swift */; };
-		D5D206CF1D0CB4FB009C2E86 /* EmployerFilteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D206CE1D0CB4FB009C2E86 /* EmployerFilteringViewController.swift */; };
+		D5D206CD1D0CB4C8009C2E86 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D206CC1D0CB4C8009C2E86 /* EmployeeViewController.swift */; };
+		D5D206CF1D0CB4FB009C2E86 /* EmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D206CE1D0CB4FB009C2E86 /* EmployerViewController.swift */; };
 		D5D207461D0CBBC8009C2E86 /* RPFloatingPlaceholderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D207431D0CBBC8009C2E86 /* RPFloatingPlaceholderTextField.m */; };
 		D5D207471D0CBBC8009C2E86 /* RPFloatingPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D207451D0CBBC8009C2E86 /* RPFloatingPlaceholderTextView.m */; };
+		D5D2077E1D0CEAAD009C2E86 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D2077D1D0CEAAD009C2E86 /* SWRevealViewController.m */; };
+		D5D207801D0CF716009C2E86 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2077F1D0CF716009C2E86 /* MenuController.swift */; };
+		D5D207821D0CFFE1009C2E86 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D207811D0CFFE1009C2E86 /* HomeViewController.swift */; };
+		D5D207A21D0D1796009C2E86 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D207A11D0D1796009C2E86 /* ChatViewController.swift */; };
+		D5D207AD1D0D2447009C2E86 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D207AC1D0D2447009C2E86 /* ScanViewController.swift */; };
 		D5FC2B9C1D0CAC1F00EFFA50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC2B9B1D0CAC1F00EFFA50 /* AppDelegate.swift */; };
 		D5FC2B9E1D0CAC1F00EFFA50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC2B9D1D0CAC1F00EFFA50 /* ViewController.swift */; };
 		D5FC2BA11D0CAC1F00EFFA50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5FC2B9F1D0CAC1F00EFFA50 /* Main.storyboard */; };
@@ -19,14 +24,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D5D206CC1D0CB4C8009C2E86 /* CandidateQAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CandidateQAViewController.swift; path = ../CandidateQAViewController.swift; sourceTree = "<group>"; };
-		D5D206CE1D0CB4FB009C2E86 /* EmployerFilteringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployerFilteringViewController.swift; path = ../EmployerFilteringViewController.swift; sourceTree = "<group>"; };
+		D5D206CC1D0CB4C8009C2E86 /* EmployeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeViewController.swift; path = ../EmployeeViewController.swift; sourceTree = "<group>"; };
+		D5D206CE1D0CB4FB009C2E86 /* EmployerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployerViewController.swift; path = ../EmployerViewController.swift; sourceTree = "<group>"; };
 		D5D207401D0CBBC7009C2E86 /* HR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HR-Bridging-Header.h"; sourceTree = "<group>"; };
 		D5D207411D0CBBC8009C2E86 /* RPFloatingPlaceholderConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPFloatingPlaceholderConstants.h; sourceTree = "<group>"; };
 		D5D207421D0CBBC8009C2E86 /* RPFloatingPlaceholderTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPFloatingPlaceholderTextField.h; sourceTree = "<group>"; };
 		D5D207431D0CBBC8009C2E86 /* RPFloatingPlaceholderTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPFloatingPlaceholderTextField.m; sourceTree = "<group>"; };
 		D5D207441D0CBBC8009C2E86 /* RPFloatingPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPFloatingPlaceholderTextView.h; sourceTree = "<group>"; };
 		D5D207451D0CBBC8009C2E86 /* RPFloatingPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPFloatingPlaceholderTextView.m; sourceTree = "<group>"; };
+		D5D2077C1D0CEAAD009C2E86 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../Downloads/SidebarMenu 2/SidebarMenu/SWRevealViewController.h"; sourceTree = "<group>"; };
+		D5D2077D1D0CEAAD009C2E86 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../Downloads/SidebarMenu 2/SidebarMenu/SWRevealViewController.m"; sourceTree = "<group>"; };
+		D5D2077F1D0CF716009C2E86 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		D5D207811D0CFFE1009C2E86 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D5D207A11D0D1796009C2E86 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		D5D207AC1D0D2447009C2E86 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		D5FC2B981D0CAC1F00EFFA50 /* HR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FC2B9B1D0CAC1F00EFFA50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5FC2B9D1D0CAC1F00EFFA50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +58,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D5D2077A1D0CE9EE009C2E86 /* RPFloatingPlaceholders */ = {
+			isa = PBXGroup;
+			children = (
+				D5D207411D0CBBC8009C2E86 /* RPFloatingPlaceholderConstants.h */,
+				D5D207421D0CBBC8009C2E86 /* RPFloatingPlaceholderTextField.h */,
+				D5D207431D0CBBC8009C2E86 /* RPFloatingPlaceholderTextField.m */,
+				D5D207441D0CBBC8009C2E86 /* RPFloatingPlaceholderTextView.h */,
+				D5D207451D0CBBC8009C2E86 /* RPFloatingPlaceholderTextView.m */,
+			);
+			name = RPFloatingPlaceholders;
+			sourceTree = "<group>";
+		};
+		D5D2077B1D0CEA4B009C2E86 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D5D2077C1D0CEAAD009C2E86 /* SWRevealViewController.h */,
+				D5D2077D1D0CEAAD009C2E86 /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
 		D5FC2B8F1D0CAC1F00EFFA50 = {
 			isa = PBXGroup;
 			children = (
@@ -66,14 +98,15 @@
 		D5FC2B9A1D0CAC1F00EFFA50 /* HR */ = {
 			isa = PBXGroup;
 			children = (
+				D5D2077B1D0CEA4B009C2E86 /* SWRevealViewController */,
+				D5D2077A1D0CE9EE009C2E86 /* RPFloatingPlaceholders */,
 				D5FC2B9B1D0CAC1F00EFFA50 /* AppDelegate.swift */,
-				D5D206CC1D0CB4C8009C2E86 /* CandidateQAViewController.swift */,
-				D5D207411D0CBBC8009C2E86 /* RPFloatingPlaceholderConstants.h */,
-				D5D207421D0CBBC8009C2E86 /* RPFloatingPlaceholderTextField.h */,
-				D5D207431D0CBBC8009C2E86 /* RPFloatingPlaceholderTextField.m */,
-				D5D207441D0CBBC8009C2E86 /* RPFloatingPlaceholderTextView.h */,
-				D5D207451D0CBBC8009C2E86 /* RPFloatingPlaceholderTextView.m */,
-				D5D206CE1D0CB4FB009C2E86 /* EmployerFilteringViewController.swift */,
+				D5D207AC1D0D2447009C2E86 /* ScanViewController.swift */,
+				D5D207A11D0D1796009C2E86 /* ChatViewController.swift */,
+				D5D207811D0CFFE1009C2E86 /* HomeViewController.swift */,
+				D5D206CC1D0CB4C8009C2E86 /* EmployeeViewController.swift */,
+				D5D206CE1D0CB4FB009C2E86 /* EmployerViewController.swift */,
+				D5D2077F1D0CF716009C2E86 /* MenuController.swift */,
 				D5FC2B9D1D0CAC1F00EFFA50 /* ViewController.swift */,
 				D5FC2B9F1D0CAC1F00EFFA50 /* Main.storyboard */,
 				D5FC2BA21D0CAC1F00EFFA50 /* Assets.xcassets */,
@@ -155,12 +188,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D206CF1D0CB4FB009C2E86 /* EmployerFilteringViewController.swift in Sources */,
+				D5D2077E1D0CEAAD009C2E86 /* SWRevealViewController.m in Sources */,
+				D5D206CF1D0CB4FB009C2E86 /* EmployerViewController.swift in Sources */,
 				D5FC2B9E1D0CAC1F00EFFA50 /* ViewController.swift in Sources */,
+				D5D207AD1D0D2447009C2E86 /* ScanViewController.swift in Sources */,
 				D5FC2B9C1D0CAC1F00EFFA50 /* AppDelegate.swift in Sources */,
-				D5D206CD1D0CB4C8009C2E86 /* CandidateQAViewController.swift in Sources */,
+				D5D206CD1D0CB4C8009C2E86 /* EmployeeViewController.swift in Sources */,
+				D5D207821D0CFFE1009C2E86 /* HomeViewController.swift in Sources */,
 				D5D207461D0CBBC8009C2E86 /* RPFloatingPlaceholderTextField.m in Sources */,
 				D5D207471D0CBBC8009C2E86 /* RPFloatingPlaceholderTextView.m in Sources */,
+				D5D207A21D0D1796009C2E86 /* ChatViewController.swift in Sources */,
+				D5D207801D0CF716009C2E86 /* MenuController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,12 +8,20 @@
 
 import UIKit
 
-class EmployerFilteringViewController: UIViewController {
+class EmployerViewController: UIViewController {
 
+    @IBOutlet var menuButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if revealViewController() != nil {
+//            revealViewController().rearViewRevealWidth = 62
+            menuButton.target = revealViewController()
+            menuButton.action = "revealToggle:"
+            
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
 
     override func didReceiveMemoryWarning() {

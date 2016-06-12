@@ -1,5 +1,5 @@
 //
-//  CandidateQAViewController.swift
+//  MenuViewController.swift
 //  HR
 //
 //  Created by Sonalee Shah on 2016-06-11.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CandidateQAViewController: UIViewController {
+class MenuViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
