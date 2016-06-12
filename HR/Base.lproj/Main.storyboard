@@ -180,9 +180,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyC-Uo-jG5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyC-Uo-jG5">
                                 <rect key="frame" x="0.0" y="614" width="375" height="53"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="wbv-we-LSY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="CONTINUE">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -191,17 +194,8 @@
                                     <segue destination="Lmf-eV-zce" kind="show" id="uY2-gz-nWB"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qUa-gp-KLu" customClass="RPFloatingPlaceholderTextView">
-                                <rect key="frame" x="20" y="85" width="335" height="240"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Soft Skills"/>
-                                </userDefinedRuntimeAttributes>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oC6-gc-K24" customClass="RPFloatingPlaceholderTextView">
-                                <rect key="frame" x="20" y="354.5" width="335" height="240"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oC6-gc-K24" customClass="RPFloatingPlaceholderTextView">
+                                <rect key="frame" x="20" y="355" width="335" height="240"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -209,8 +203,32 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Technical Skills"/>
                                 </userDefinedRuntimeAttributes>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qUa-gp-KLu" customClass="RPFloatingPlaceholderTextView">
+                                <rect key="frame" x="20" y="85" width="335" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="PHz-kB-Iz7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Soft Skills"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qUa-gp-KLu" firstAttribute="leading" secondItem="Xc5-aY-7WI" secondAttribute="leadingMargin" constant="4" id="FTZ-sm-CO6"/>
+                            <constraint firstItem="ZyC-Uo-jG5" firstAttribute="leading" secondItem="Xc5-aY-7WI" secondAttribute="leading" id="MoF-Wi-ToT"/>
+                            <constraint firstItem="oC6-gc-K24" firstAttribute="top" secondItem="qUa-gp-KLu" secondAttribute="bottom" constant="30" id="TM8-hb-y45"/>
+                            <constraint firstItem="qUa-gp-KLu" firstAttribute="top" secondItem="I9d-g0-g0i" secondAttribute="bottom" constant="21" id="TpW-gO-91w"/>
+                            <constraint firstItem="ZyC-Uo-jG5" firstAttribute="top" secondItem="oC6-gc-K24" secondAttribute="bottom" constant="19" id="hFf-GL-nPs"/>
+                            <constraint firstAttribute="trailing" secondItem="ZyC-Uo-jG5" secondAttribute="trailing" id="i2r-pj-qoc"/>
+                            <constraint firstItem="ZyC-Uo-jG5" firstAttribute="bottom" secondItem="lVo-34-pIH" secondAttribute="top" id="kMH-j2-UPB"/>
+                            <constraint firstItem="oC6-gc-K24" firstAttribute="centerX" secondItem="ZyC-Uo-jG5" secondAttribute="centerX" id="o7U-qa-xFA"/>
+                            <constraint firstItem="qUa-gp-KLu" firstAttribute="leading" secondItem="oC6-gc-K24" secondAttribute="leading" id="rKp-Oa-btU"/>
+                            <constraint firstItem="qUa-gp-KLu" firstAttribute="trailing" secondItem="oC6-gc-K24" secondAttribute="trailing" id="vry-wj-elu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Desired Skills" id="CTJ-mA-tba">
                         <barButtonItem key="leftBarButtonItem" image="Menu" id="fXB-Ru-Igp"/>
@@ -405,17 +423,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amanda Bridgehouse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azb-2K-lH8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amanda Bridgehouse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azb-2K-lH8">
                                 <rect key="frame" x="20" y="85" width="335" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="sGN-5B-mvf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AmandaBrighthouse" translatesAutoresizingMaskIntoConstraints="NO" id="1ov-IH-T8x">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AmandaBrighthouse" translatesAutoresizingMaskIntoConstraints="NO" id="1ov-IH-T8x">
                                 <rect key="frame" x="88" y="139" width="200" height="200"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1ov-IH-T8x" firstAttribute="top" secondItem="azb-2K-lH8" secondAttribute="bottom" constant="13" id="3nO-bW-fui"/>
+                            <constraint firstItem="azb-2K-lH8" firstAttribute="top" secondItem="2Vh-l5-ure" secondAttribute="bottom" constant="21" id="5fv-Of-pSI"/>
+                            <constraint firstItem="y1e-Ia-lel" firstAttribute="top" secondItem="1ov-IH-T8x" secondAttribute="bottom" constant="328" id="efE-rO-H7v"/>
+                            <constraint firstItem="azb-2K-lH8" firstAttribute="centerX" secondItem="1ov-IH-T8x" secondAttribute="centerX" id="gbs-Yu-oOL"/>
+                            <constraint firstItem="azb-2K-lH8" firstAttribute="leading" secondItem="RqJ-c8-N0B" secondAttribute="leadingMargin" constant="4" id="jpl-zL-46W"/>
+                            <constraint firstItem="1ov-IH-T8x" firstAttribute="leading" secondItem="RqJ-c8-N0B" secondAttribute="leadingMargin" constant="72" id="sLr-Ea-oK3"/>
+                            <constraint firstItem="azb-2K-lH8" firstAttribute="centerX" secondItem="RqJ-c8-N0B" secondAttribute="centerX" id="vQy-cj-OuV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Candidate Profile" id="nCl-4w-dmb"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -470,45 +500,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kce-4E-ilT" userLabel="Question 1" customClass="RPFloatingPlaceholderTextView">
-                                <rect key="frame" x="20" y="84" width="335" height="113"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Pick 5 words to describe yourself."/>
-                                </userDefinedRuntimeAttributes>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E2n-Gn-Zat" userLabel="Question 2" customClass="RPFloatingPlaceholderTextView">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E2n-Gn-Zat" userLabel="Question 2" customClass="RPFloatingPlaceholderTextView">
                                 <rect key="frame" x="20" y="217" width="335" height="113"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="E3u-dv-mAX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="What are your hobbies and/or interests?"/>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oNI-yD-1Zd" userLabel="Question 3" customClass="RPFloatingPlaceholderTextView">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oNI-yD-1Zd" userLabel="Question 3" customClass="RPFloatingPlaceholderTextView">
                                 <rect key="frame" x="20" y="349" width="335" height="113"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="Vyq-ot-1j1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Who is your role model and why?"/>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwh-f5-wTu">
-                                <rect key="frame" x="0.0" y="614" width="375" height="53"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="CONTINUE">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="M8h-CE-wgg" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="E2n-vo-G5x"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oRN-2S-Pbp" userLabel="Question 4" customClass="RPFloatingPlaceholderTextView">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oRN-2S-Pbp" userLabel="Question 4" customClass="RPFloatingPlaceholderTextView">
                                 <rect key="frame" x="20" y="482" width="335" height="113"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -517,8 +533,52 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="What is your favorite book?"/>
                                 </userDefinedRuntimeAttributes>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwh-f5-wTu">
+                                <rect key="frame" x="0.0" y="614" width="375" height="53"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="jMh-Hz-6hd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="CONTINUE">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="M8h-CE-wgg" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="E2n-vo-G5x"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kce-4E-ilT" userLabel="Question 1" customClass="RPFloatingPlaceholderTextView">
+                                <rect key="frame" x="20" y="84" width="335" height="113"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="mAL-ua-mEn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Pick 5 words to describe yourself."/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oRN-2S-Pbp" firstAttribute="centerX" secondItem="Hwh-f5-wTu" secondAttribute="centerX" id="2Ae-Pd-fE0"/>
+                            <constraint firstItem="oNI-yD-1Zd" firstAttribute="trailing" secondItem="oRN-2S-Pbp" secondAttribute="trailing" id="3ee-mO-CA4"/>
+                            <constraint firstItem="Hwh-f5-wTu" firstAttribute="top" secondItem="oRN-2S-Pbp" secondAttribute="bottom" constant="19" id="4ZB-tO-2Kr"/>
+                            <constraint firstItem="kce-4E-ilT" firstAttribute="leading" secondItem="cAl-ia-lpG" secondAttribute="leadingMargin" constant="4" id="LDv-G0-N3C"/>
+                            <constraint firstItem="kce-4E-ilT" firstAttribute="leading" secondItem="E2n-Gn-Zat" secondAttribute="leading" id="LW0-Ew-mHR"/>
+                            <constraint firstItem="E2n-Gn-Zat" firstAttribute="trailing" secondItem="oNI-yD-1Zd" secondAttribute="trailing" id="TRh-3c-whb"/>
+                            <constraint firstItem="E2n-Gn-Zat" firstAttribute="leading" secondItem="oNI-yD-1Zd" secondAttribute="leading" id="Tpb-UC-Cbs"/>
+                            <constraint firstAttribute="trailing" secondItem="Hwh-f5-wTu" secondAttribute="trailing" id="UzC-QA-deD"/>
+                            <constraint firstItem="E2n-Gn-Zat" firstAttribute="top" secondItem="kce-4E-ilT" secondAttribute="bottom" constant="20" id="YaN-UE-ziy"/>
+                            <constraint firstItem="Hwh-f5-wTu" firstAttribute="bottom" secondItem="dhN-UT-62B" secondAttribute="top" id="a0R-t4-dDZ"/>
+                            <constraint firstItem="Hwh-f5-wTu" firstAttribute="leading" secondItem="cAl-ia-lpG" secondAttribute="leading" id="ad2-AS-jYd"/>
+                            <constraint firstItem="oNI-yD-1Zd" firstAttribute="leading" secondItem="oRN-2S-Pbp" secondAttribute="leading" id="bID-jy-zLG"/>
+                            <constraint firstItem="oNI-yD-1Zd" firstAttribute="top" secondItem="E2n-Gn-Zat" secondAttribute="bottom" constant="19" id="jWF-DK-90u"/>
+                            <constraint firstItem="oRN-2S-Pbp" firstAttribute="top" secondItem="oNI-yD-1Zd" secondAttribute="bottom" constant="20" id="m0v-KE-e3F"/>
+                            <constraint firstItem="kce-4E-ilT" firstAttribute="top" secondItem="0uD-0v-oke" secondAttribute="bottom" constant="20" id="rGn-20-ot0"/>
+                            <constraint firstItem="kce-4E-ilT" firstAttribute="trailing" secondItem="E2n-Gn-Zat" secondAttribute="trailing" id="vzL-lP-ERX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Candidate Questionnaire" id="nGA-ps-ptC">
                         <barButtonItem key="leftBarButtonItem" image="Menu" id="ecf-aU-Q0N"/>
