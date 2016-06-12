@@ -188,7 +188,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qSD-Eq-sYW" kind="show" id="jJE-X5-MiL"/>
+                                    <segue destination="Lmf-eV-zce" kind="show" id="uY2-gz-nWB"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qUa-gp-KLu" customClass="RPFloatingPlaceholderTextView">
@@ -212,7 +212,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Employer" selectedImage="checklist" id="G7v-5S-OIV"/>
                     <navigationItem key="navigationItem" title="Desired Skills" id="CTJ-mA-tba">
                         <barButtonItem key="leftBarButtonItem" image="Menu" id="fXB-Ru-Igp"/>
                     </navigationItem>
@@ -225,7 +224,7 @@
             </objects>
             <point key="canvasLocation" x="369.5" y="2948.5"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Potential Candidates-->
         <scene sceneID="mQi-YZ-F3k">
             <objects>
                 <tableViewController id="qSD-Eq-sYW" sceneMemberID="viewController">
@@ -260,6 +259,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Y3G-op-4dJ" kind="show" id="Utf-og-ag0"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Lrk-7p-NOe">
                                         <rect key="frame" x="0.0" y="108" width="375" height="44"/>
@@ -384,11 +386,43 @@
                             <outlet property="delegate" destination="qSD-Eq-sYW" id="RQI-Uc-eT5"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Potential Candidates" id="efa-eK-olb"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcx-zr-Oh2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="901.5" y="2948.5"/>
+            <point key="canvasLocation" x="1435.5" y="2948.5"/>
+        </scene>
+        <!--Candidate Profile-->
+        <scene sceneID="ZG6-Im-rmM">
+            <objects>
+                <viewController title="Candidate Profile" id="8Xa-nC-3Xj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Vh-l5-ure"/>
+                        <viewControllerLayoutGuide type="bottom" id="y1e-Ia-lel"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RqJ-c8-N0B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amanda Bridgehouse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azb-2K-lH8">
+                                <rect key="frame" x="20" y="85" width="335" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AmandaBrighthouse" translatesAutoresizingMaskIntoConstraints="NO" id="1ov-IH-T8x">
+                                <rect key="frame" x="88" y="139" width="200" height="200"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Candidate Profile" id="nCl-4w-dmb"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SpP-cA-Y4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2411.5" y="2948.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VNO-Sc-6Fo">
@@ -597,6 +631,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCX-vv-7TS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1435.5" y="3686.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jid-yx-Xdn">
+            <objects>
+                <navigationController id="Lmf-eV-zce" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nws-4h-Pcc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qSD-Eq-sYW" kind="relationship" relationship="rootViewController" id="BjS-HT-F3A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xgE-gB-SEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="901.5" y="2948.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="E72-h7-y7b">
+            <objects>
+                <navigationController id="Y3G-op-4dJ" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="arT-6v-91h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8Xa-nC-3Xj" kind="relationship" relationship="rootViewController" id="pNq-Yg-udV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7SB-G7-VXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1919.5" y="2948.5"/>
         </scene>
         <!--Menu Table View Controller-->
         <scene sceneID="aE7-Tx-Dye">
@@ -808,7 +876,6 @@
         <image name="Menu" width="22" height="22"/>
         <image name="Scanner" width="48" height="48"/>
         <image name="StephenPeterson" width="416" height="416"/>
-        <image name="checklist" width="256" height="256"/>
         <image name="ctj" width="640" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
